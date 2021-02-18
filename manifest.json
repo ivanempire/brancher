@@ -5,5 +5,12 @@
 	"manifest_version": 3,
 	"background": {
 		"service_worker": "background.js"
-	}
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://app.bitrise.io/app/*"],
+			"js": ["foreground.js"],
+			"run_at": "document_idle"
+		}
+	]
 }
