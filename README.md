@@ -41,3 +41,9 @@ which will be listed at the bottom.
 - [ ] Publish to the Chrome Web Store
 - [ ] Remove the delay function during loading
 - [ ] Find true love
+
+## Disclaimer
+The GitHub personal access token is stored in `chrome.storage.local`. It is not synced between Chrome clients, and it
+is also not encrypted at all. In fact, if you call the API, you will be able to see the plaintext version. Please be
+careful with this, and I do not take any responsibility for any security issues that may arise - just keep your system
+safe from anyone who may want to do it harm. :thumbsup:

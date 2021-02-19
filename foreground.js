@@ -10,6 +10,7 @@ window.addEventListener("load", function(event) {
 function processProjectName() {
 	let projectLink = document.getElementsByClassName("app-option source github")[0].href.split("/");
 	let projectName = `${projectLink[projectLink.length - 2]}/${projectLink[projectLink.length - 1]}`;
+	console.log("Brancher: Processed project name: " + projectName);
 	chrome.runtime.sendMessage({projectName: projectName});
 }
 
@@ -23,6 +24,7 @@ chrome.runtime.onMessage.addListener(message => {
  * @param branchList The list of GitHub branch names received from the back-end script
  */
 function populateBranchList(branchList) {
+	console.log("Brancher: Got branch list from background script");
 	let branchInput = document.querySelectorAll('[ng-model="buildConfig.branch"]')[0];
 
 	let datalist = document.createElement("datalist");
