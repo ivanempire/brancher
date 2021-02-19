@@ -1,5 +1,7 @@
 window.addEventListener("load", function(event) {
 	// REALLY not ideal
+	// If you're reading this, I know, I tried all sorts of event listeners, but Angular just keeps loading stuff.
+	// Hacky solution it is.....
 	setTimeout(function() {
 		processProjectName();
 	}, 1000);
